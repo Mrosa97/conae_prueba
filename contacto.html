@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactate con la Comisión Nacional de Actividades espaciales. Si querés formar parte del equipo de trabajo, podés adjuntar tus datos acompañado de tu Curriculum Vitae.">
+    <meta name="keywords" content="contacto, trabajo, actividades, espaciales, tecnología, científicos, gobierno, argentino, espacio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/stylesAntiguo.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Contacto - Conae</title>
+</head>
+<body>
+    <div class="grillaContacto">
+        <header> 
+            <a href="index.html"><img class="logo" src="images/logo.svg" alt="logo"></a> 
+
+            <nav>
+                <ul class="padreNav">
+                    <li><a href="nosotros.html">Nosotros</a> </li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+    </header>
+
+    <section class="contenidoContacto">
+        <div>
+            <img class="imgFormulario animate__animated animate__fadeInLeft" src="images/astronauta_contacto.png" alt="Astronauta contacto" width="1000px">
+        </div>
+
+        <div class="contenedorFormulario" data-aos="zoom-in">
+            <h1 class="tituloInternas">Contacto</h1>
+            <div>
+                    <form action="">
+                        <label for="nombre">Ingresá tu nombre y apellido</label> <br>
+                        <input class="input" type="text" placeholder="Ej: Matías Rosa" id="nombre"> <br>
+                        <label for="mail">Email</label> <br>
+                        <input class="input" type="email" name="mail" id="mail" placeholder="Ej: mail@gmail.com"> <br>
+                        <label for="nacionalidad">Nacionalidad</label> <br>
+                        <select class="input" name="nacionalidad" id="nacionalidad">
+                            <option class="option" value="argentina">Argentina</option>
+                            <option class="option" value="uruguay">Uruguay</option>
+                            <option class="option" value="colombia">Colombia</option>
+                            <option class="option" value="venezuela">Venezuela</option>
+                            <option class="option" value="chile">Chile</option>
+                            <option class="option" value="paraguay">Paraguay</option>
+                            <option class="option" value="bolivia">Bolivia</option>
+                            <option class="option" value="brasil">Brasil</option>
+                            <option class="option" value="otro">Otro</option>
+                        </select> <br>
+                        <label  for="comentarios">Comentarios</label> <br>
+                        <textarea class="textArea" name="comentarios" id="comentarios" cols="30" rows="5"></textarea> <br>
+                        <input class="checkbox" type="checkbox" required>
+                        <label for=" motivo">Acepto los términos y condiciónes</label> <br>
+                        <input class="botonEnviar" type="submit" name="enviar" id="enviar">
+                        <input class="botonBorrarDatos" type="reset" name="reset" value="Borrar datos">
+                    </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="direccion">
+            <h2>Dirección: Av. Paseo Colón 751</h2>
+        </div>
+        <div class="telefono">
+            <h2>Teléfono: (54-11) 4331-0074</h2>
+        </div>
+        <div class="sociales">
+            <ul class="navFooter">
+                <li> <a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>
+                <li> <a href="#"> <img src="images/twitter.svg" alt="Twitter"></a> </li>
+                <li> <a href="#"> <img src="images/facebook.svg" alt="Facebook"></a></li>
+            </ul>
+        </div>
+
+    </footer>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

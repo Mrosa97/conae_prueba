@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&display=swap');
+
+$font-playfair: 'Playfair Display', serif;
+$font-source: 'Source Sans Pro', sans-serif; 
+$altura-header: 20vh;
+
+@mixin boton{
+    background-color: #00B2FF;
+    color: #FFFFFF;
+    font-family: $font-source;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #00B2FF;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 62.5%; Reset para REMS. 1REM=10px */
+}
+
+body{
+    background-image: url(../images/fondo-index.jpg);
+    background-position: center center;
+    background-size: cover;
+    font-size: 1rem;
+}
+
+p {
+    font-family: $font-source;
+    font-size: 1rem;
+    color: white;
+}
+
+h1 {
+    font-family: $font-playfair;
+}
+
+h2 {
+    font-family: $font-source;
+}
+
+h3 {
+    font-family: $font-playfair
+}
+
+header{
+    display: flex;
+    height: $altura-header/2;
+    justify-content: space-between;
+    align-items: center;
+
+        .logo{
+            width: 110px;
+            margin-left: 100px;
+        }
+
+            .padreNav{
+                list-style-type: none;
+                display: flex;
+                margin-right: 100px;
+
+                &__item{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-right: 70px;
+
+                    a{
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }   
+            .padreNav li a:hover{
+                color: #00B2FF;
+            }
+}
+
+/*Main*/
+
+main{
+    height: 85vh;
+    width: 100vh;
+    
+        section.contenidoIndex{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    
+        .contIndexUno{
+            display: flex;
+            flex-direction: column;
+            
+            &__img{
+                width: 698px;
+                position: relative;
+                z-index: 1; 
+            }
+        }
+        
+        .contIndexDos{
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 150px;
+            padding-top: 110px;
+        
+            &__exploracion{
+            font-size: 5rem;
+            line-height: 90px;
+            margin-bottom: 18px;
+            margin-top: 8px;
+            color: white;
+            }
+        
+            &__futuro{
+                font-size: 1rem;
+                color: white;
+                font-weight: 700;
+                font-style: italic;
+            }
+        
+            p{
+                margin-bottom: 30px;
+                color: white; 
+            }
+        
+            &__boton{
+                @include boton;
+            }
+        }
+    }
+
+
+
+
+footer{
+    height: 5vh;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(39, 39, 39, 0.5);
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    font-size: 0.55rem;
+
+    h2{
+        font-family: $font-source;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 0px;
+    }
+
+    .direccion{
+        margin-left: 100px;
+    }
+
+    div{
+        .navFooter{
+            display: flex;
+            list-style-type: none;
+            margin-right: 170px;
+            margin-bottom: 0px;
+                
+            &__item{
+                margin-left: 30px;
+            }
+        }
+        
+    }
+}
+
+// Interna nosotros
+
+section.alturaSeccion{
+    height: 85vh;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    .sobreNosotros{
+        margin-left: 100px;
+        &__titulo{
+            font-size: 3.125rem;
+            line-height: 60px;
+            margin-bottom: 18px;
+            margin-top: 8px;
+            color: white;
+            max-width: 300px;
+        }
+        &__parrafo{
+            max-width: 420px;
+            margin-bottom: 15px;
+        }
+        &__boton{
+            @include boton;
+            margin-top: 10px;
+        }
+    }
+
+    .videoNosotros iframe{
+        width: 1000px;
+        height: 545px;
+        margin-right: 170px;
+    }
+}
+
+// Interna Noticias
+
+#grilla{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 85vh 5vh;
+    grid-template-areas: 
+                        "header"
+                        "section"
+                        "footer"
+                        ;
+}
+
+.headerGrids{
+    grid-area: header;
+}
+
+.gridsNav{
+    list-style-type: none;
+    display: flex;
+    margin-right: 100px;
+
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 70px;
+
+        a{
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+
+            &:hover{
+                color: #00B2FF;
+            }
+        }
+    }
+}
+
+
+.sectionGrids{
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 165px 20px 100px;
+
+    &__titulo{
+        font-size: 3.125rem;
+        line-height: 60px;
+        margin-bottom: 18px;
+        margin-top: 8px;
+        color: white;
+        max-width: 400px;
+    }
+
+    &__boton{
+        width: 10%;
+        height: 45px;
+        align-self: center;
+        color: white;
+        background-color: rgba(29, 29, 29, 0);
+        border: solid 2px white;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.2);
+            border: solid 2px white;
+        }
+    }
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    &__card{
+        background-color: rgba(29, 29, 29, 0.8);
+        flex-basis: calc(33.3% - 6rem);
+        text-align: center;
+        border-radius: 20px;
+        transform: scale(1,1);
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgba(59, 59, 59, 0.8);
+            transform: scale(1.05,1.05);
+        }
+
+        & a{
+            text-decoration: none;
+            color: white;
+        }
+
+        & img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px 20px 0 0;
+        }
+
+        & h3{
+            color: white;
+            padding-top: 20px;
+        }
+
+        & p{
+            padding: 10px 30px 30px 30px;
+        }
+    }
+}
+
+.footerGrids{
+    background-color: rgba(39, 39, 39, 0.5);
+    grid-area: footer;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.55rem;
+
+    ul.navfooter{
+        @extend .padreNav;
+        margin-right: 170px;
+        margin-bottom: 0px;
+
+        &__item{
+            margin-left: 30px;
+        }
+    }
+}
+
+
+
